@@ -115,12 +115,20 @@ public class FunPic extends ActionBarActivity implements View.OnClickListener {
 
     private void clearCache() {
 
-        File[] cachedImgs = cacheDir.listFiles();
+        final File[] cachedImgs = cacheDir.listFiles();
 
         if (null != cachedImgs) {
-            for (File f : cachedImgs) {
-                f.delete();
-            }
+
+            new Thread(new Runnable() {
+
+                @Override
+                public void run() {
+
+                    for (File f : cachedImgs) {
+                        f.delete();
+                    }
+                }
+            }).start();
         }
     }
 
