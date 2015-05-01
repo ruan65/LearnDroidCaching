@@ -5,7 +5,6 @@
     <item
         android:id="@+id/cache"
         android:orderInCategory="100"
-        android:icon="@android:drawable/checkbox_off_background"
-        android:title="@string/action_settings"
+        android:title="К"
         app:showAsAction="never|withText" />
 </menu>

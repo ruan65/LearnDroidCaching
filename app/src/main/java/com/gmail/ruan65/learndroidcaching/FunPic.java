@@ -60,13 +60,19 @@ public class FunPic extends ActionBarActivity implements View.OnClickListener {
     }
 
     @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+
+        menu.findItem(R.id.cache).setTitle(cacheMode ? "Не кешировать" : "Кешировать");
+
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         if (item.getItemId() == R.id.cache) {
 
             prefs.edit().putBoolean(getString(R.string.prefs_cache), cacheMode = !cacheMode).apply();
-
-            item.setTitle(cacheMode ? "Не кешировать" : "Кешировать");
 
             if (!cacheMode) clearCache();
 
