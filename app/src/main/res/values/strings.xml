@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LearnDroidCaching</string>
+
+    <string name="hello_world">Покажи мне:</string>
+
+    <string name="action_settings">Кэшировать</string>
+
+    <string name="cat_url">http://i.imgur.com/pyBxhT0.jpg</string>
+    <string name="dog_url">http://i.imgur.com/RLG2L0n.jpg</string>
+    <string name="miley_url">http://i.imgur.com/xvGwqKu.jpg</string>
+    <string name="prefs_cache">img_cache</string>
+</resources>
